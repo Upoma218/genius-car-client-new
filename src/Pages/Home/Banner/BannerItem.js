@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const BannerItem = ({slide}) => {
     const {id, image, prev, next} = slide;
@@ -11,8 +12,8 @@ const BannerItem = ({slide}) => {
             <p className="text-6xl text-white font-bold">Affordable <br /> Price For Car <br /> Servicing</p>
             <p className="text-white text-xl mt-12">There are many variations of passages of  available, but <br /> the majority have suffered alteration in some form</p>
             <div className="mt-12">
-                <button className="btn btn-accent mr-5">Discover More</button>
-                <button className="btn btn-outline btn-accent">Latest Project</button>
+                <Link to='/about'><button className="btn btn-accent mr-5">Discover More</button></Link>
+                <Link to='/services'><button className="btn btn-outline btn-accent">Latest Project</button></Link>
             </div>
         </div>
 

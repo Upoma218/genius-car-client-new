@@ -1,7 +1,7 @@
 import React from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import login from '../../assets/images/login/login.svg'
+import loginImg from '../../assets/images/login/login.svg'
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
 
@@ -27,7 +27,7 @@ const Login = () => {
         <div className="hero">
             <div className="hero-content flex-col lg:flex-row gap-6">
                 <div>
-                    <img src={login} alt="" />
+                    <img src={loginImg} alt="" />
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <h1 className="text-5xl text-center my-5 font-bold">Login</h1>
