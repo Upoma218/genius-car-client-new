@@ -1,11 +1,12 @@
 import React from 'react';
 import { useContext } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
 const Checkout = () => {
     const {_id, title, price, img } = useLoaderData();
     const { user } = useContext(AuthContext);
+    const navigate = useNavigate()
 
     const handlePlaceOrder = event => {
         event.preventDefault();
@@ -46,6 +47,7 @@ const Checkout = () => {
             if(data.acknowledged){
                 alert('Order placed Successfully!');
                 form.reset();
+                navigate('/orders')
             }
         })
         .catch(error => console.log(error))
